@@ -1,0 +1,12 @@
+{
+  "folders": [
+    {
+      "name": "mono",
+      "path": "."
+    },
+    {
+      "name": "app",
+      "path": "app"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "bad-svelte-mono",
+  "private": true,
+  "scripts": {
+    "build": "nx run-many -t build",
+    "test": "npm run parallel-test && npm run serial-test",
+    "test-no-cache": "npm run parallel-test-no-cache && npm run serial-test-no-cache",
+    "parallel-test": "node bin/nx-test.js --exclude",
+    "parallel-test-no-cache": "node bin/nx-test.js --no-cache --exclude",
+    "serial-test": "node bin/nx-test.js --parallel=1 -p",
+    "serial-test-no-cache": "node bin/nx-test.js --no-cache --parallel=1 -p",
+    "dev": "nx run-many -t dev",
+    "lint": "nx run-many -t lint",
+    "clean": "nx run-many -t clean && rm -rf node_modules",
+    "clear-cache": "rm -rdf node_modules/.cache/nx",
+    "format": "prettier --write \"**/*.{js,ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "nx": "16.2.1"
+  },
+  "packageManager": "pnpm@7.15.0"
+}
